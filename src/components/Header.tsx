@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10  rounded-full flex items-center justify-center">
-             <img src='/Logo (5).png' alt="mindlink global" />
+             <img src='./Logo (5).png' alt="mindlink global" />
             </div>
             <span className="text-xl font-bold text-white">MindLink Global</span>
           </Link>
