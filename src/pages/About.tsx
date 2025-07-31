@@ -79,7 +79,7 @@ const About: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Discover your next academic adventure with immersive, interactive exploration.
+         Discover your future through personalized support and exciting international academic pathways.
           </motion.p>
         </motion.div>
     
@@ -129,10 +129,10 @@ const About: React.FC = () => {
               Your Gateway to <span className="text-green-600">Global Education</span>
             </h2>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-gray-700">
-              Edabroad is one of the leading study abroad Consultants in Kerala, India, committed to assisting Indian students who want to pursue their education in overseas educational institutions. We provide quality career guidance and counseling to students so they can make the right decision.
+           As one of Kerala’s premier study abroad consultancies, Mindlink guides Indian students toward achieving their global academic dreams. Our experienced counsellors offer personalized support to help each student find their ideal academic and career direction.
             </p>
             <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-700">
-              We provide detailed information about institutions in countries like the USA, UK, Canada, Australia, and across Europe. Edabroad is a solution-oriented consultancy offering tailor-made career paths to suit all students within individual financial, personal, and educational constraints.
+             Mindlink provides expert guidance on top universities in the USA, UK, Canada, Australia, and Europe, with personalized study plans with customised to your goals, budget, and aspirations.
             </p>
           </motion.div>
         </div>
@@ -154,10 +154,10 @@ const About: React.FC = () => {
               Guidance from <span className="text-green-600">Experienced Experts</span>
             </h2>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-gray-700">
-              We are a team of expert study abroad consultants and counsellors with more than 15 years of experience in this industry. Our wealth of experience and knowledge, combined with links to foreign universities, enable us to identify the most suitable university for each student.
+            With over 15 years of experience, our expert counsellors help students find the right academic path. Backed by strong university partnerships and deep industry insight, we match each student with the most suitable institution.
             </p>
             <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-700">
-              We bring overseas education within your reach. We are the stepping-stones to the future of each student, and our success is linked to their success.
+             At Mindlink, we make overseas education accessible because your success is our success.
             </p>
           </motion.div>
 

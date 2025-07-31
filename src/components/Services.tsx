@@ -15,22 +15,22 @@ const WhyUsSection: React.FC = () => {
     {
       icon: <Award className="w-6 h-6 text-green-600" />,
       title: 'Years of Experience',
-      description: 'We have years of experience helping students achieve their study abroad dreams.',
+      description: 'With years of proven expertise, we’ve helped countless students turn their study abroad dreams into reality.',
     },
     {
       icon: <Clock className="w-6 h-6 text-green-600" />,
       title: 'Always On Time',
-      description: 'We ensure all processes are completed on time, so you never miss a deadline.',
+      description: 'From applications to visas, we ensure every step is completed promptly—so you never miss a deadline.',
     },
     {
       icon: <BadgeCheck className="w-6 h-6 text-green-600" />,
-      title: '5000+ Visas Processed',
-      description: 'We have successfully processed visas for over 5000 students.',
+      title: '500+ Visas Processed',
+      description: 'Our track record speaks for itself: over 500 successful student visas and counting.',
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-green-600" />,
-      title: 'Best In Class',
-      description: 'Gain admission to the best universities with our expert guidance.',
+      title: 'Best In Class Admissions',
+      description: 'Unlock opportunities at top global universities with the guidance of our experienced advisors.',
     },
   ];
 
@@ -49,7 +49,7 @@ const WhyUsSection: React.FC = () => {
             </h2>
           </div>
           <p className={`text-base sm:text-lg text-gray-600 max-w-3xl mx-auto transition-all duration-700 ease-out delay-200 ${inView ? 'opacity-100' : 'opacity-0'}`}>
-            Flying to study abroad is a dream for many. At Mindlink, we have helped hundreds of students from Kochi select the best university, course, and country.
+          Studying abroad is a life changing experience and at Mindlink, we make it seamless. We've guided hundreds of students from Kochi in choosing the right course, university, and country, turning their aspirations into global success stories.
           </p>
         </div>
 

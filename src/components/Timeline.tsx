@@ -103,7 +103,7 @@ const Timeline: React.FC = () => {
           
             <div className="overflow-hidden">
               <p className={`text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed transition-opacity duration-700 ease-out delay-500 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
-                Let our expert advisors guide you in discovering the best countries and universities tailored to your goals. We take the time to understand your academic profile, financial plans, and career ambitions ensuring a perfect fit and a seamless path to your study abroad dream.
+              Let our expert advisors guide you in discovering the best countries and universities tailored to your goals. We take the time to understand your academic profile, financial plans, and career ambitions ensuring a perfect fit and a seamless path to your study abroad dream.
               </p>
             </div>
           </div>

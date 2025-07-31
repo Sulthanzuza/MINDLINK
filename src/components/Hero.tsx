@@ -81,8 +81,7 @@ const Hero = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-teal-600">Future.</span>
               </h1>
               <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-            Turn your dreams into reality with expert, personalized guidance for studying at the world’s leading universities. </p>
-            </div>
+           Turn your dreams into reality with expert, personalized guidance for studying at the world’s leading universities.</p>  </div>
 
             <div className={`transition-all duration-700 ease-out delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} flex flex-col sm:flex-row gap-4 justify-center lg:justify-start`}>
               <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">

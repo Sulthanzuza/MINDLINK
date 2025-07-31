@@ -97,7 +97,7 @@ const StudyAbroadSection: React.FC = () => {
         Popular Study Abroad <span className="text-green-600">Destinations</span>
       </h2>
       <p className="max-w-3xl mx-auto mb-10 text-lg text-gray-700">
-      Discover top countries and universities tailored to your goals with expert guidance every step of the way.
+    Discover top countries and universities tailored to your goals with expert guidance every step of the way.
       </p>
 
       <div

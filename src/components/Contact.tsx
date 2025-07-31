@@ -137,7 +137,7 @@ const ContactPage: FC = () => {
           </AnimatedItem>
           <AnimatedItem inView={inView} delay="200ms">
             <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Have a question or ready to begin? Fill out the form below, and our team will contact you shortly.
+             Have questions or ready to take the first step? Fill out the form below, and our team will reach out shortly.
             </p>
           </AnimatedItem>
         </div>
@@ -147,7 +147,7 @@ const ContactPage: FC = () => {
             <div className="space-y-6">
               <h3 className="text-2xl sm:text-3xl font-bold text-white">Book a <span className="text-[#4ea674]">Free Consultation</span></h3>
               <p className="text-gray-300 text-base sm:text-lg">
-                Let's discuss your future. Our initial consultation is always free and without obligation.
+               Let’s talk about your future. Our first consultation is completely free—with no obligations.
               </p>
               <div className="space-y-4 text-base sm:text-lg">
                 <a href="tel:+91 80 897 17 075" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
