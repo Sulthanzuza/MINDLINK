@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight, Award, Clock, BadgeCheck, GraduationCap } from 'lucide-react';
 
-// --- The Main Component ---
+
 const WhyUsSection: React.FC = () => {
-  // A single observer for the entire section for efficiency
+
   const { ref, inView } = useInView({
-    threshold: 0.15, // Trigger when 15% of the section is visible
-    triggerOnce: true, // Animation runs only once
+    threshold: 0.15, 
+    triggerOnce: true,
   });
 
-  // Data for the feature list
+ 
   const features = [
     {
       icon: <Award className="w-6 h-6 text-green-600" />,
@@ -37,7 +37,7 @@ const WhyUsSection: React.FC = () => {
   return (
     <section ref={ref} id="why-us" className="py-20 sm:py-24 bg-gray-50 overflow-x-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        
         <div className="text-center mb-12 sm:mb-16">
           <div className={`transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             <p className="text-green-600 mb-3 font-semibold tracking-wide uppercase text-sm">
@@ -53,10 +53,10 @@ const WhyUsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Main Content Area */}
+        
         <div className="flex items-center flex-col lg:flex-row gap-12 sm:gap-16 lg:gap-20">
           
-          {/* Content - Left Side (Feature List) */}
+         
           <div className="flex-1">
             <div className="w-full max-w-xl mx-auto lg:mx-0">
               <div className="space-y-6">
@@ -91,7 +91,7 @@ const WhyUsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Image - Right Side */}
+          
           <div className={`flex-1 transition-all duration-1000 ease-out delay-500 ${inView ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-16 scale-95'}`}>
             <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-green-200/50 transition-shadow duration-500 group">
               <img
@@ -109,7 +109,7 @@ const WhyUsSection: React.FC = () => {
 };
 
 
-// Main App component to render the section
+
 const App = () => {
   return <WhyUsSection />;
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
 import { destinations } from '../data/destinations';
 
-// Generate stats dynamically based on country
+
 const getCountryStats = (id) => {
   const statsMap = {
     australia: { universities: "43+", students: "450K+", cities: "8+" },
@@ -16,7 +16,7 @@ const getCountryStats = (id) => {
   return statsMap[id] || { universities: "N/A", students: "N/A", cities: "N/A" };
 };
 
-// Interactive Destination Card with Background Image Hover
+
 const DestinationCard = ({ destination, index, onHover }) => {
   const { name, image, hoverText, link, id } = destination;
   const stats = getCountryStats(id);
@@ -71,9 +71,9 @@ const DestinationCard = ({ destination, index, onHover }) => {
           mass: 0.8,
         }}
       >
-        {/* Card Container */}
+       
         <motion.div className="relative w-full h-full bg-white rounded-3xl overflow-hidden shadow-2xl">
-          {/* Background Image */}
+   
           <motion.div className="absolute inset-0">
             <img
               src={image}
@@ -86,12 +86,12 @@ const DestinationCard = ({ destination, index, onHover }) => {
             />
           </motion.div>
 
-          {/* Overlay */}
+         
           <motion.div className="absolute inset-0 bg-gradient-to-br from-[#023437]/60 via-transparent to-[#023437]/80" />
 
-          {/* Main Content */}
+       
           <div className="relative h-full flex flex-col justify-end px-4 py-6 sm:px-6 sm:py-8 text-white z-10">
-            {/* Country Name */}
+       
             <motion.div className="relative mb-2 sm:mb-4">
               <motion.h6
                 className="font-black tracking-wider uppercase relative z-10"
@@ -111,7 +111,7 @@ const DestinationCard = ({ destination, index, onHover }) => {
 };
 
 
-// Main App Component
+
 function App() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const { scrollYProgress } = useScroll();
@@ -144,7 +144,7 @@ function App() {
         />
       </motion.div>
 
-      {/* Dark Overlay */}
+  
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-[#023437]/80 via-black/60 to-[#023437]/80"
         initial={{ opacity: 0 }}
@@ -173,10 +173,10 @@ function App() {
             {hoveredCard.name}
           </motion.h2>
 
-          {/* Description */}
+        
           <motion.p
             className="text-white/90 leading-relaxed mb-6 sm:mb-8 md:mb-12 mx-auto"
-            // CHANGE: Refined clamp() for better readability
+          
             style={{ fontSize: "clamp(0.9rem, 2vw, 1.25rem)", maxWidth: "48rem" }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -203,7 +203,7 @@ function App() {
       <div
         className="text-green-400 font-black mb-1"
         style={{
-          fontSize: "clamp(1.25rem, 3.5vw, 2rem)", // Smaller min size
+          fontSize: "clamp(1.25rem, 3.5vw, 2rem)", 
           lineHeight: "1.2",
         }}
       >
@@ -212,7 +212,7 @@ function App() {
       <div
         className="uppercase tracking-wide text-white/80"
         style={{
-          fontSize: "clamp(0.7rem, 1.2vw, 0.9rem)", // Smaller text overall
+          fontSize: "clamp(0.7rem, 1.2vw, 0.9rem)", 
           lineHeight: "1.2",
         }}
       >
@@ -229,12 +229,12 @@ function App() {
 </AnimatePresence>
 
 
-      {/* Interactive Hero Section */}
+    
       <motion.section
   className="relative min-h-screen flex items-center justify-center text-white bg-gradient-to-br from-[#023437] via-gray-400 to-[#023437] overflow-hidden px-4"
   style={{ scale: heroScale, opacity: heroOpacity }}
 >
-  {/* Dynamic Background Grid */}
+
   <motion.div
     className="absolute inset-0 opacity-20"
     animate={{
@@ -256,7 +256,7 @@ function App() {
     }}
   />
 
-  {/* Interactive Title */}
+
   <motion.div
     className="relative z-20 text-center cursor-pointer w-full max-w-5xl"
     whileHover={{ scale: 1.05 }}
@@ -303,7 +303,7 @@ function App() {
     </motion.p>
   </motion.div>
 
-  {/* Scroll Indicator */}
+  
   <motion.div
     className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2"
     animate={{ y: [0, 10, 0] }}
@@ -319,7 +319,7 @@ function App() {
   </motion.div>
 </motion.section>
 
-      {/* Main Content */}
+     
       <motion.div 
         className="relative -mt-16 sm:-mt-20 z-30 bg-gray-100 rounded-t-3xl"
         initial={{ y: 100 }}
@@ -328,7 +328,7 @@ function App() {
         viewport={{ once: true }}
       >
         <div className="max-w-7xl py-16 sm:py-24 px-4 sm:px-6 mx-auto">
-          {/* Interactive Section Header */}
+       
           <motion.header 
             className="text-center mb-12 md:mb-20"
             initial={{ opacity: 0 }}
@@ -356,7 +356,7 @@ function App() {
             </motion.p>
           </motion.header>
 
-          {/* Interactive Cards Grid */}
+       
           <main>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
               {destinations.map((dest, index) => (

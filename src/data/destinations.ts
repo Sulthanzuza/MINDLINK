@@ -1,26 +1,21 @@
-// src/data/destinations.ts
 
-// --- Interface Definition ---
 export interface Destination {
   id: string;
   name: string;
-  image: string; // The type is string because it holds the imported image path
+  image: string; 
   hoverText: string;
   link: string;
 }
 
-// --- Image Imports ---
-// NOTE: You may need to adjust these paths depending on your project's folder structure.
-// This example assumes your images are in `src/assets/images/`.
+
 import ireland from '/Dublin Ireland.webp';
 import france from '/download.webp';
 import germany from '/Sydney Opera House Insights.webp';
 import canada from '/cANADA.webp';
 import australia from '/Welcome to Keep Exploring!.webp';
-import uk from '/cANADA.webp'; // Note: UK and USA are using the Canada image in your original code
+import uk from '/cANADA.webp'; 
 import usa from '/cANADA.webp';
 
-// --- Data Array ---
 export const destinations: Destination[] = [
   { id: 'australia', name: 'STUDY IN AUSTRALIA', image: australia, hoverText: 'Discover world-class education and vibrant cities in Australia. Explore diverse landscapes and a welcoming culture.', link: '#' },
   { id: 'canada', name: 'STUDY IN CANADA', image: canada, hoverText: 'Unlock endless opportunities in Canada with its top-ranked universities and diverse job market.', link: '#' },

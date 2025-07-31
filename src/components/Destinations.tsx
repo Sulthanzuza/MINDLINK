@@ -1,12 +1,11 @@
-// src/components/StudyAbroadSection.tsx
 
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { destinations } from '../data/destinations'; // Ensure this path is correct
+import { destinations } from '../data/destinations'; 
 
-// This function creates the optimal array structure for a seamless, bidirectional infinite loop.
+
 const getClonedDestinations = () => {
   if (!destinations || destinations.length === 0) return [];
-  const itemsToClone = 5; // Should be at least the max number of items visible
+  const itemsToClone = 5; 
   const firstClones = destinations.slice(0, itemsToClone);
   const lastClones = destinations.slice(-itemsToClone);
   return [...lastClones, ...destinations, ...firstClones];
@@ -17,14 +16,14 @@ const StudyAbroadSection: React.FC = () => {
   const [transitionEnabled, setTransitionEnabled] = useState(true);
 
   const clonedDestinations = useMemo(getClonedDestinations, []);
-  const initialIndex = 5; // Start index should be the number of cloned items at the beginning
+  const initialIndex = 5; 
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const isHoveredRef = useRef(false);
 
-  // --- RESPONSIVE LOGIC ---
+
   const handleResize = useCallback(() => {
     const width = window.innerWidth;
     if (width < 640) setItemsVisible(1);
@@ -38,7 +37,7 @@ const StudyAbroadSection: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
-  // --- SLIDER CONTROLS ---
+
   const nextSlide = useCallback(() => {
     setCurrentIndex(prev => prev + 1);
   }, []);
@@ -51,7 +50,6 @@ const StudyAbroadSection: React.FC = () => {
     setCurrentIndex(initialIndex + slideIndex);
   };
 
-  // --- AUTO-SLIDE WITH PAUSE ON HOVER ---
   const startSlider = useCallback(() => {
     intervalRef.current = setInterval(() => {
       if (!isHoveredRef.current) {
@@ -67,7 +65,7 @@ const StudyAbroadSection: React.FC = () => {
     };
   }, [startSlider]);
 
-  // --- INFINITE LOOP LOGIC ---
+
   const handleTransitionEnd = () => {
     if (currentIndex >= destinations.length + initialIndex) {
       setTransitionEnabled(false);
@@ -79,18 +77,18 @@ const StudyAbroadSection: React.FC = () => {
   };
 
   useEffect(() => {
-    // This effect re-enables the transition after a "snap"
+   
     if (!transitionEnabled) {
       const timer = setTimeout(() => setTransitionEnabled(true), 50);
       return () => clearTimeout(timer);
     }
   }, [transitionEnabled]);
 
-  // --- RENDER LOGIC ---
+
   const slideWidth = 100 / itemsVisible;
   const transformValue = `translateX(-${currentIndex * slideWidth}%)`;
 
-  // Calculate the active dot index, accounting for clones
+
   const activeDotIndex = (currentIndex - initialIndex + destinations.length) % destinations.length;
 
   return (
@@ -107,7 +105,7 @@ const StudyAbroadSection: React.FC = () => {
         onMouseEnter={() => { isHoveredRef.current = true; }}
         onMouseLeave={() => { isHoveredRef.current = false; }}
       >
-        {/* Navigation Arrows */}
+
         <button onClick={prevSlide} aria-label="Previous Slide" className="absolute top-1/2 z-20 p-2 -translate-y-1/2 bg-white rounded-full shadow-md cursor-pointer -left-4 md:-left-8 hover:bg-green-600 hover:text-white transition-colors">
           &#8592;
         </button>
@@ -147,7 +145,6 @@ const StudyAbroadSection: React.FC = () => {
           </div>
         </div>
         
-        {/* Dot Indicators */}
         <div className="flex justify-center mt-6 space-x-2">
           {destinations.map((_, idx) => (
             <button

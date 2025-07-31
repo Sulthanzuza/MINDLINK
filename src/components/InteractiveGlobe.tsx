@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-// --- MODIFIED: Interface changed from Country to City ---
+
 interface City {
   name: string;
   country: string;
@@ -12,7 +12,7 @@ interface City {
   universities: number;
 }
 
-// --- MODIFIED: Data array now contains 13 cities with accurate coordinates ---
+
 const cities: City[] = [
   // India
   { name: 'Mumbai', country: 'India', lat: 19.07, lon: 72.87, flag: '🇮🇳', universities: 15 },
@@ -105,7 +105,6 @@ const InteractiveGlobe: React.FC = () => {
 
     const pinMeshes: THREE.Mesh[] = [];
 
-    // --- MODIFIED: Loop now iterates over cities ---
     cities.forEach((city) => {
       const position = latLonToVector3(city.lat, city.lon, 1);
 
@@ -114,7 +113,7 @@ const InteractiveGlobe: React.FC = () => {
         new THREE.MeshBasicMaterial({ color: 0xffd700 })
       );
       pin.position.copy(position);
-      // --- MODIFIED: Store the full city object in userData ---
+
       pin.userData = { city }; 
       globe.add(pin);
       pinMeshes.push(pin);
@@ -202,8 +201,7 @@ const InteractiveGlobe: React.FC = () => {
   return (
     <div className="relative w-full h-96 lg:h-[500px]">
       <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
-      
-      {/* --- MODIFIED: Tooltip now displays city information --- */}
+  
       {hoveredCity && (
         <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-md rounded-lg p-4 min-w-[220px] shadow-lg border border-gray-200/50">
           <div className="flex items-center gap-3 mb-2">

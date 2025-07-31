@@ -4,12 +4,11 @@ import Lottie from 'lottie-react';
 import { Phone, ArrowRight, Sparkles, User, Mail, MessageSquare, Loader, GraduationCap, MapPin, BookOpen } from 'lucide-react';
 import * as THREE from 'three';
 
-// --- Dropdown Options Constants ---
-// --- MODIFIED: Removed programmeOptions ---
-const qualificationOptions = ["12th / Plus Two", "Diploma", "Bachelor's Degree (UG)", "Master's Degree (PG)", "PhD", "Other"];
+
+const qualificationOptions = ["Plus Two", "Bachelor's Degree", "Master's Degree", "Other"];
 const districtOptions = ["Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki", "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod"];
 
-// --- Reusable Animated Component ---
+
 const AnimatedItem: FC<{ children: ReactNode; inView: boolean; delay?: string }> = ({ children, inView, delay = '0ms' }) => (
   <div
     className={`transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -22,7 +21,7 @@ const AnimatedItem: FC<{ children: ReactNode; inView: boolean; delay?: string }>
 const ContactPage: FC = () => {
   const { ref: viewRef, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
-  // --- 3D Background Effect (No changes here) ---
+
   const canvasRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!canvasRef.current || canvasRef.current.childElementCount > 0) return;
@@ -76,7 +75,7 @@ const ContactPage: FC = () => {
     };
   }, []);
 
-  // --- Form State Management ---
+
   const [formData, setFormData] = useState({
     name: '', email: '', qualification: '', district: '', programme: '', message: '',
   });
@@ -91,7 +90,7 @@ const ContactPage: FC = () => {
     }
   };
 
-  // --- MODIFIED: Validation logic for 'programme' field ---
+
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
     if (!formData.name.trim()) newErrors.name = 'Name is required.';
@@ -115,7 +114,7 @@ const ContactPage: FC = () => {
       return;
     }
     setStatus('loading');
-    // Simulate API call
+ 
     setTimeout(() => {
       setStatus('success');
     }, 2000);

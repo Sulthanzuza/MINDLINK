@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Instagram} from 'lucide-react';
-import { destinations } from '../data/destinations'; // Ensure this path is correct
+import { destinations } from '../data/destinations';
 
 
 const Logo = '/logo.png'; 
@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        {/* Main grid for content */}
+      
         <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12">
           
-          {/* Left Side - Brand and Contact Info (Takes up 5 of 12 columns on medium screens and up) */}
+ 
           <div className="md:col-span-5 space-y-6">
             <div className="flex items-center">
               <img src={Logo} alt="EduGlobal Logo" className="h-20 w-auto object-contain" />
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               Empowering students to achieve their dreams through world-class education opportunities. 
             </p>
 
-            {/* Contact Info */}
+       
             <div className="space-y-3 text-sm">
               <a href="mailto:info@eduglobal.com" className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors">
                 <Mail className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -45,8 +45,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Side - Links Grid (Takes up 7 of 12 columns on medium screens and up) */}
-          {/* This grid is now perfectly balanced with two columns */}
+   
           <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
             
             <div>
@@ -74,15 +73,15 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
+
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-gray-600 text-sm text-center md:text-left">
              © {currentYear} MindLink Global. All rights reserved. Powered by <a href="https://www.aieera.com/" className="font-semibold hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">Aieera</a>.
           </div>
 
-          {/* Social Links */}
+
           <div className="flex gap-4">
-  {/* --- Facebook Icon with Brand Color Hover --- */}
+
   <a 
     href="https://www.facebook.com/mindlinkedu/" 
     aria-label="Facebook" 
@@ -92,7 +91,7 @@ const Footer: React.FC = () => {
     <Facebook className="w-5 h-5" />
   </a>
 
-  {/* --- Instagram Icon with Brand Color Hover --- */}
+
   <a 
     href="https://www.instagram.com/mindlinkedu/" 
     aria-label="Instagram" 

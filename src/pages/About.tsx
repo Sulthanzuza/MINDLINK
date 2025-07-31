@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
 
-// Assuming your logo is in the public folder. 
-// If it's in src/assets, you'd import it like: `import Logo from '../assets/logo.png';`
+
 const Logo = '/logo.png';
 
 const fadeIn = {
@@ -14,7 +13,7 @@ const fadeIn = {
   },
 };
 
-// --- Main App Component ---
+
 const About: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
@@ -27,7 +26,7 @@ const About: React.FC = () => {
         className="relative h-screen flex items-center justify-center text-white bg-gradient-to-br from-[#023437] via-gray-400 to-[#023437] overflow-hidden"
         style={{ scale: heroScale, opacity: heroOpacity }}
       >
-        {/* Dynamic Background Grid */}
+        
         <motion.div 
           className="absolute inset-0 opacity-20"
           animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
@@ -43,7 +42,7 @@ const About: React.FC = () => {
           }}
         />
     
-        {/* Interactive Title */}
+      
         <motion.div 
           className="relative z-20 text-center cursor-pointer px-4"
           whileHover={{ scale: 1.05 }}
@@ -84,7 +83,7 @@ const About: React.FC = () => {
           </motion.p>
         </motion.div>
     
-        {/* Scroll Indicator */}
+      
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
@@ -100,11 +99,11 @@ const About: React.FC = () => {
         </motion.div>
       </motion.section>
 
-      {/* 2. Section - Image LEFT, Text RIGHT */}
+    
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* Image Left */}
+        
           <motion.div 
             className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -119,7 +118,7 @@ const About: React.FC = () => {
             />
           </motion.div>
 
-          {/* Text Right */}
+         
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -139,11 +138,11 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Section - Image RIGHT, Text LEFT */}
+     
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* Text Left (On mobile, this appears above the image) */}
+      
           <motion.div
             className="lg:order-1"
             variants={fadeIn}
@@ -162,7 +161,7 @@ const About: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Image Right (On mobile, this appears below the text) */}
+         
           <motion.div 
             className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl lg:order-2"
             initial={{ opacity: 0, scale: 0.8 }}

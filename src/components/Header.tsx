@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Declare navigation links as an array of objects
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about-us'},
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
     >
       <div className="mx-auto px-6 py-1.5">
         <nav className="flex items-center justify-between">
-          {/* Logo Section */}
+        
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full flex items-center justify-center">
              <img src='./logo (5).png' alt="mindlink global" />
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             <span className="text-xl font-bold text-white mix-blend-difference">MindLink Global</span>
           </Link>
 
-          {/* Desktop Navigation - Mapped from the array */}
+ 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+
           <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100/50 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -59,7 +59,6 @@ const Header: React.FC = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu (conditionally rendered) - Also mapped from the array */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200/50">
             <div className="flex flex-col space-y-4 pt-4">

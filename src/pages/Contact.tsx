@@ -5,11 +5,11 @@ import * as THREE from 'three';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Lottie from 'lottie-react';
 
-// --- Integrated Form Field Options ---
+
 const qualificationOptions = [ "12th / Plus Two", "Diploma", "Bachelor's Degree (UG)", "Master's Degree (PG)", "PhD", "Other" ];
 const districtOptions = [ "Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki", "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod" ];
 
-// Reusable Animated Component for Staggered Effect
+
 const AnimatedItem: React.FC<{ children: React.ReactNode; inView: boolean; delay?: string }> = ({ children, inView, delay = '0ms' }) => (
   <div
     className={`transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -23,11 +23,11 @@ const ContactPage: React.FC = () => {
   const { ref: contactSectionRef, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const { scrollYProgress } = useScroll();
 
-  // Hero animations
+
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
-  // 3D Background Effect
+
   const canvasRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!canvasRef.current || canvasRef.current.childElementCount > 0) return;
@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
     };
   }, []);
 
-  // --- Integrated Form State Management ---
+
   const [formData, setFormData] = useState({
     name: '', email: '', qualification: '', district: '', programme: '', message: ''
   });
