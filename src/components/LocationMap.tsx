@@ -91,7 +91,7 @@ const mapStyles = [
 
 const LocationMap: React.FC = () => {
 
-  const apiKey = 'AIzaSyC_xiK5XCiNdsB9qUF-P82pqzSrXe4k2w8'
+  const apiKey = process.env.MAPKEY
   
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',

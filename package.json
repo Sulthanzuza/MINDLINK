@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
     "@types/three": "^0.178.1",
+    "dotenv": "^17.2.1",
     "framer-motion": "^12.23.5",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.344.0",
