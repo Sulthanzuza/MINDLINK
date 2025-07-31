@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
           <div className="flex gap-4">
   {/* --- Facebook Icon with Brand Color Hover --- */}
   <a 
-    href="#" 
+    href="https://www.facebook.com/mindlinkedu/" 
     aria-label="Facebook" 
     className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 
                hover:bg-blue-600 hover:text-white transition-colors duration-300"
