@@ -11,7 +11,7 @@ const App = () => {
   );
 };
 
-const Hero: React.FC = () => {
+const Hero = () => {
   // useInView hook for the main content visibility
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
   });
 
   // Custom hook for counting animation
-  const useCountUp = (target: number, duration: number = 2000) => {
+  const useCountUp = (target, duration = 2000) => {
     const [count, setCount] = useState(0);
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
@@ -50,7 +50,6 @@ const Hero: React.FC = () => {
   const animatedCountries = useCountUp(15);
   const animatedUniversities = useCountUp(200);
 
-
   const scrollToNext = () => {
     // In a real app, you'd have a section with id="timeline" or similar
     const nextSection = document.getElementById('hero')?.nextElementSibling;
@@ -76,21 +75,19 @@ const Hero: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8 text-center lg:text-left">
             <div className={`transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-[#023437] mb-6 hero-title-glow">
                 Design Your
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-teal-600">Future.</span>
               </h1>
               <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-                Transform your dreams into reality with personalized guidance for studying in the world's top universities.
-              </p>
+            Turn your dreams into reality with expert, personalized guidance for studying at the world’s leading universities. </p>
             </div>
 
             <div className={`transition-all duration-700 ease-out delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} flex flex-col sm:flex-row gap-4 justify-center lg:justify-start`}>
               <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
-                Get Started
+               Get Consultation
               </button>
               <button
                 onClick={scrollToNext}
@@ -132,7 +129,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Indicator - only show if not in view yet */}
-       <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${inView ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${inView ? 'opacity-0' : 'opacity-100 animate-bounce'}`}>
         <div className="w-6 h-10 border-2 border-green-600 rounded-full flex justify-center pt-1">
           <div className="w-1 h-2 bg-green-600 rounded-full"></div>
         </div>
@@ -141,7 +138,7 @@ const Hero: React.FC = () => {
   );
 };
 
-// We need a simple CSS animation for the image fade-in
+// We need TWO style tags (one for the title glow, one for the media query).
 const style = document.createElement('style');
 style.textContent = `
   .hero-title-glow {
@@ -150,5 +147,15 @@ style.textContent = `
 `;
 document.head.append(style);
 
+// Responsive top padding for hero only between 780px-1020px
+const customHeroStyle = document.createElement('style');
+customHeroStyle.textContent = `
+  @media (min-width:780px) and (max-width:1020px) {
+    #hero {
+      padding-top: 6rem;
+    }
+  }
+`;
+document.head.append(customHeroStyle);
 
 export default App;

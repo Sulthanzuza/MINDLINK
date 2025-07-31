@@ -28,8 +28,8 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10  rounded-full flex items-center justify-center">
              <img src='./logo (5).png' alt="mindlink global" />
-            </div>
-            <span className="text-xl font-bold text-white">MindLink Global</span>
+            </div> 
+            <span className="text-xl font-bold text-white mix-blend-difference">MindLink Global</span>
           </Link>
 
           {/* Desktop Navigation - Mapped from the array */}
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-gray-700 hover:text-green-600 transition-all duration-300 font-medium tracking-wider hover:tracking-widest"
+                className="text-gray-700 mix-blend-difference hover:text-green-600 transition-all duration-300 font-medium tracking-wider hover:tracking-widest"
               >
                 {link.name}
               </Link>
