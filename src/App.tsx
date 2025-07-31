@@ -21,7 +21,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<ContactPage />} />
       </Routes>
        <WhatsAppFloat 
-        phoneNumber="1234567890" 
+        phoneNumber="+919539859689" 
         message="Hi! I found your website and I'm interested in your services." 
       />
       <Footer/>
