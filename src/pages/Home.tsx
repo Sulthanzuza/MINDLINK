@@ -15,7 +15,7 @@ function Home() {
      
       <Hero />
       <Timeline />
-      <CurvedLoop marqueeText="MINDLINK GLOBAL ✦" />
+      <CurvedLoop marqueeText=" MINDLINK GLOBAL ✦ " />
       <Destinations />
       <Services />
       <CTA />

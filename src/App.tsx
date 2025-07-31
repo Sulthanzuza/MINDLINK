@@ -8,9 +8,11 @@ import Footer from './components/Footer';
 import Destination from './pages/Destination'
 import ContactPage from './pages/Contact';
 import WhatsAppFloat from './components/WhatsappFloat';
+import ScrollToTop from './components/ScrollToTop';
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />

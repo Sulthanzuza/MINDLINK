@@ -6,8 +6,8 @@ import * as THREE from 'three';
 
 // --- Dropdown Options Constants ---
 // --- MODIFIED: Removed programmeOptions ---
-const qualificationOptions = [ "12th / Plus Two", "Diploma", "Bachelor's Degree (UG)", "Master's Degree (PG)", "PhD", "Other" ];
-const districtOptions = [ "Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki", "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod" ];
+const qualificationOptions = ["12th / Plus Two", "Diploma", "Bachelor's Degree (UG)", "Master's Degree (PG)", "PhD", "Other"];
+const districtOptions = ["Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki", "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod"];
 
 // --- Reusable Animated Component ---
 const AnimatedItem: FC<{ children: ReactNode; inView: boolean; delay?: string }> = ({ children, inView, delay = '0ms' }) => (
@@ -68,7 +68,7 @@ const ContactPage: FC = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       if (canvasRef.current && renderer.domElement) {
-        try { canvasRef.current.removeChild(renderer.domElement); } catch (e) {}
+        try { canvasRef.current.removeChild(renderer.domElement); } catch (e) { }
       }
       renderer.dispose();
       particlesGeometry.dispose();
@@ -146,32 +146,36 @@ const ContactPage: FC = () => {
         <div className="grid lg:grid-cols-2 gap-y-12 gap-x-16 items-start">
           <AnimatedItem inView={inView} delay="400ms">
             <div className="space-y-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white">Book a <span className="text-[#4ea674]">Free Consultation</span></h3>
-                <p className="text-gray-300 text-base sm:text-lg">
-                    Let's discuss your future. Our initial consultation is always free and without obligation.
-                </p>
-                <div className="space-y-4 text-base sm:text-lg">
-                    <a href="tel:+919876543210" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
-                        <Phone className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
-                        <span>+91 987 654 3210</span>
-                    </a>
-                    <a href="mailto:admissions.kochi@university.ac.in" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
-                        <Mail className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
-                        <span>admissions.kochi@university.ac.in</span>
-                    </a>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">Book a <span className="text-[#4ea674]">Free Consultation</span></h3>
+              <p className="text-gray-300 text-base sm:text-lg">
+                Let's discuss your future. Our initial consultation is always free and without obligation.
+              </p>
+              <div className="space-y-4 text-base sm:text-lg">
+                <a href="tel:+91 80 897 17 075" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
+                  <Phone className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
+                  <span>+91 80 897 17 075</span>
+                </a>
+                <a href="tel:+919539859689" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
+                  <Phone className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
+                  <span>+91 95 398 59 689</span>
+                </a>
+                <a href="mailto:info@mindlinkglobal.in" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
+                  <Mail className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
+                  <span>info@mindlinkglobal.in</span>
+                </a>
+              </div>
+              <div className="pt-6 border-t border-white border-opacity-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-x-8">
+                  <div className="text-center sm:text-left">
+                    <div className="text-3xl sm:text-4xl font-bold text-white mb-1">99%</div>
+                    <div className="text-xs sm:text-sm text-[#4ea674] uppercase tracking-widest">Success Rate</div>
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <div className="text-3xl sm:text-4xl font-bold text-white mb-1">10+</div>
+                    <div className="text-xs sm:text-sm text-[#4ea674] uppercase tracking-widest">Years Experience</div>
+                  </div>
                 </div>
-                <div className="pt-6 border-t border-white border-opacity-10">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-x-8">
-                        <div className="text-center sm:text-left">
-                            <div className="text-3xl sm:text-4xl font-bold text-white mb-1">99%</div>
-                            <div className="text-xs sm:text-sm text-[#4ea674] uppercase tracking-widest">Success Rate</div>
-                        </div>
-                        <div className="text-center sm:text-left">
-                            <div className="text-3xl sm:text-4xl font-bold text-white mb-1">10+</div>
-                            <div className="text-xs sm:text-sm text-[#4ea674] uppercase tracking-widest">Years Experience</div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
           </AnimatedItem>
 
@@ -195,7 +199,7 @@ const ContactPage: FC = () => {
                       <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className={`w-full bg-[#023437] bg-opacity-40 border rounded-lg py-3 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all ${errors.name ? 'border-red-500 ring-red-500/50' : 'border-white/20 focus:ring-[#4ea674]'}`} required />
                       {errors.name && <p className="text-red-400 text-sm mt-1 ml-2">{errors.name}</p>}
                     </div>
-                     <div className="relative group">
+                    <div className="relative group">
                       <Mail className="absolute top-1/2 left-4 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-[#4ea674] transition-colors" />
                       <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className={`w-full bg-[#023437] bg-opacity-40 border rounded-lg py-3 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all ${errors.email ? 'border-red-500 ring-red-500/50' : 'border-white/20 focus:ring-[#4ea674]'}`} required />
                       {errors.email && <p className="text-red-400 text-sm mt-1 ml-2">{errors.email}</p>}
@@ -222,7 +226,7 @@ const ContactPage: FC = () => {
                     </div>
 
 
-                     <div className="relative group">
+                    <div className="relative group">
                       <BookOpen className="absolute top-1/2 left-4 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-[#4ea674] transition-colors" />
                       <input type="text" name="programme" placeholder="Prefered Course" value={formData.programme} onChange={handleChange} className={`w-full bg-[#023437] bg-opacity-40 border rounded-lg py-3 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all ${errors.programme ? 'border-red-500 ring-red-500/50' : 'border-white/20 focus:ring-[#4ea674]'}`} required />
                       {errors.programme && <p className="text-red-400 text-sm mt-1 ml-2">{errors.programme}</p>}

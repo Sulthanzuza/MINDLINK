@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,15 +19,18 @@ const Header: React.FC = () => {
         fixed top-4 left-[10px] right-[10px] z-50
         border border-white/30
         bg-white/20 shadow-lg backdrop-blur-lg
-        transition-all duration-500
         ${isMobileMenuOpen ? 'rounded-3xl' : 'rounded-full'}
       `}
+      style={{
+        transitionProperty: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter',
+        transitionDuration: '500ms',
+      }}
     >
       <div className="mx-auto px-6 py-1.5">
         <nav className="flex items-center justify-between">
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10  rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center">
              <img src='./logo (5).png' alt="mindlink global" />
             </div> 
             <span className="text-xl font-bold text-white mix-blend-difference">MindLink Global</span>

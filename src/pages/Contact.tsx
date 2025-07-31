@@ -216,9 +216,9 @@ const ContactPage: React.FC = () => {
                     <Phone className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
                     <span>+91 95 398 59 689</span>
                   </a>
-                  <a href="mailto:admissions.kochi@university.ac.in" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
+                  <a href="mailto:info@mindlinkglobal.in" className="flex items-center gap-4 hover:text-[#4ea674] transition-colors group">
                     <Mail className="w-6 h-6 text-[#4ea674] group-hover:scale-110 transition-transform" />
-                    <span>admissions.kochi@university.ac.in</span>
+                    <span>info@mindlinkglobal.in</span>
                   </a>
                 </div>
                 <div className="pt-8 border-t border-white border-opacity-10">
