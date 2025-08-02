@@ -23,7 +23,7 @@ const navigate = useNavigate();
   };
 
   const handleViewDestinations = () => {
-    navigate('/destinations');
+    navigate('/destination');
   };
   
   const useCountUp = (target, duration = 2000) => {
