@@ -7,14 +7,16 @@ export interface Destination {
   link: string;
 }
 
-
-import ireland from '/Dublin Ireland.webp';
-import france from '/download.webp';
-import germany from '/Sydney Opera House Insights.webp';
-import canada from '/cANADA.webp';
-import australia from '/Welcome to Keep Exploring!.webp';
-import uk from '/cANADA.webp'; 
-import usa from '/cANADA.webp';
+import chennai from '/chennai.jpg';
+import bangalore from '/banglore.jpg';
+import mumbai from '/mumbai.jpg';
+import ireland from '/ireland.jpg';
+import france from '/france.jpg';
+import germany from '/germany.jpg';
+import canada from '/canada.jpg';
+import australia from '/australia.jpg';
+import uk from '/uk.jpg'; 
+import usa from '/usa.jpg';
 
 export const destinations: Destination[] = [
   {
@@ -38,7 +40,7 @@ export const destinations: Destination[] = [
     name: 'STUDY IN GERMANY',
     image: germany,
     hoverText:
-      'Germany is officially called the Federal Republic of Germany, located in central-western Europe.',
+      'Germany is a leading destination for international students, offering world-class education, low or no tuition fees, and a strong focus on research and innovation. With globally ranked universities, post-study work opportunities, and a rich cultural experience, Germany provides the ideal environment for academic and career growth.',
     link: '#',
   },
   {
@@ -105,4 +107,29 @@ export const destinations: Destination[] = [
       'New Zealand offers world-class education, a safe and welcoming environment, and stunning natural landscapes. With affordable tuition, post-study work opportunities, and globally recognized qualifications, it\'s an excellent choice for international students.',
     link: '#',
   },
+  {
+  id: 'chennai',
+  name: 'STUDY IN CHENNAI',
+  image: chennai,
+  hoverText:
+    'Chennai, a major educational and cultural hub in South India, offers top universities and research institutions. Known for its excellence in engineering, medicine, and arts, the city provides a blend of academic rigor, coastal charm, and affordable living.',
+  link: '#',
+},
+{
+  id: 'bangalore',
+  name: 'STUDY IN BANGALORE',
+  image: bangalore,
+  hoverText:
+    'Bangalore, India’s tech capital, is home to prestigious institutions in technology, management, and science. With its startup ecosystem, vibrant student culture, and pleasant climate, it’s an ideal choice for students seeking academic and career growth.',
+  link: '#',
+},
+{
+  id: 'mumbai',
+  name: 'STUDY IN MUMBAI',
+  image: mumbai,
+  hoverText:
+    'Mumbai offers top-tier universities and a dynamic urban learning environment. As India’s financial and entertainment capital, it provides diverse academic programs, internship opportunities, and exposure to industries like media, finance, and business.',
+  link: '#',
+},
+
 ];
