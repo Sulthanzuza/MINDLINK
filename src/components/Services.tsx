@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight, Award, Clock, BadgeCheck, GraduationCap } from 'lucide-react';
 
-
 const WhyUsSection: React.FC = () => {
 
   const { ref, inView } = useInView({
@@ -10,7 +9,7 @@ const WhyUsSection: React.FC = () => {
     triggerOnce: true,
   });
 
- 
+
   const features = [
     {
       icon: <Award className="w-6 h-6 text-green-600" />,
@@ -49,7 +48,7 @@ const WhyUsSection: React.FC = () => {
             </h2>
           </div>
           <p className={`text-base sm:text-lg text-gray-600 max-w-3xl mx-auto transition-all duration-700 ease-out delay-200 ${inView ? 'opacity-100' : 'opacity-0'}`}>
-          Studying abroad is a life changing experience and at Mindlink, we make it seamless. We've guided hundreds of students from Kochi in choosing the right course, university, and country, turning their aspirations into global success stories.
+       Studying abroad is a life-changing experience, and at Mindlink, we make the journey smooth and stress-free. We've helped hundreds of students from across Kerala find the right course, university, and destination transforming their dreams into global success stories.
           </p>
         </div>
 
@@ -81,7 +80,7 @@ const WhyUsSection: React.FC = () => {
                 style={{ transitionDelay: `${200 + features.length * 150}ms` }}
               >
                 <a 
-                  href="#contact" 
+                  href="/contact" 
                   className="inline-flex items-center gap-2 text-green-600 hover:text-green-800 font-semibold group text-sm sm:text-base"
                 >
                   Get Started Today

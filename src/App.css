@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@keyframes blinkGreen {
+  0%, 100% { 
+    color: inherit; 
+  }
+  50% { 
+    color: #22c55e; 
+  }
+}
+
+.blink-green {
+  animation: blinkGreen 3s infinite;
+  transition: color 0.3s ease-in-out;
+}
 
 :root {
   --primary-green: #3E7C59;

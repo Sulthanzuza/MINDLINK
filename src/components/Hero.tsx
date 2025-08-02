@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ArrowDown, Play } from 'lucide-react';
 import InteractiveGlobe from './InteractiveGlobe';
-
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
  
@@ -17,7 +17,14 @@ const Hero = () => {
     threshold: 0.1,
     triggerOnce: true,
   });
+const navigate = useNavigate();
+  const handleConsultation = () => {
+    navigate('/contact');
+  };
 
+  const handleViewDestinations = () => {
+    navigate('/destinations');
+  };
   
   const useCountUp = (target, duration = 2000) => {
     const [count, setCount] = useState(0);
@@ -75,25 +82,26 @@ const Hero = () => {
        
           <div className="space-y-8 text-center lg:text-left">
             <div className={`transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-[#023437] mb-6 hero-title-glow">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#023437] to-green-500 mb-6 hero-title-glow">
                 Design Your
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-teal-600">Future.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-900 to-teal-600">Future.</span>
               </h1>
               <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
            Turn your dreams into reality with expert, personalized guidance for studying at the world’s leading universities.</p>  </div>
 
             <div className={`transition-all duration-700 ease-out delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} flex flex-col sm:flex-row gap-4 justify-center lg:justify-start`}>
-              <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                <Play className="w-5 h-5" />
+              <button onClick={handleConsultation}
+              className="px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+              
                Get Consultation
               </button>
               <button
-                onClick={scrollToNext}
+                onClick={handleViewDestinations}
                 className="px-8 py-3 bg-white text-gray-700 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 View Destinations
-                <ArrowDown className="w-4 h-4" />
+              
               </button>
             </div>
 
