@@ -249,7 +249,7 @@ const App: React.FC = () => {
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
-  // Memoized mobile detection
+
   const checkMobile = useCallback(() => {
     setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
   }, []);
@@ -355,7 +355,7 @@ const App: React.FC = () => {
 
             <motion.div
               className={`absolute inset-0 flex flex-col items-center justify-start text-white z-50 ${
-                isMobile ? 'overflow-y-auto pt-16 pb-8' : 'justify-center'
+                isMobile ? 'overflow-y-auto pt-32 pb-8' : 'justify-center'
               } p-3 sm:p-4 md:p-6 lg:p-8`}
               variants={contentVariants}
               initial="hidden"
@@ -533,7 +533,7 @@ const App: React.FC = () => {
         </motion.div>
       </motion.section>
 
-      {/* Optimized Cards Section */}
+    
       <motion.div 
         className="relative -mt-16 sm:-mt-20 z-30 bg-gray-100 rounded-t-3xl"
         initial={{ y: 50 }}
