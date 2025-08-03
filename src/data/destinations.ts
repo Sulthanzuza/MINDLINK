@@ -7,16 +7,20 @@ export interface Destination {
   link: string;
 }
 
-import chennai from '/chennai.jpg';
-import bangalore from '/banglore.jpg';
-import mumbai from '/mumbai.jpg';
-import ireland from '/ireland.jpg';
-import france from '/france.jpg';
-import germany from '/germany.jpg';
-import canada from '/canada.jpg';
-import australia from '/australia.jpg';
-import uk from '/uk.jpg'; 
-import usa from '/usa.jpg';
+import chennai from '/chennai.webp';
+import bangalore from '/banglore.webp';
+import mumbai from '/mumbai.webp';
+import ireland from '/ireland.webp';
+import france from '/france.webp';
+import germany from '/germany.webp';
+import canada from '/canada.webp';
+import australia from '/australia.webp';
+import uk from '/uk.webp'; 
+import usa from '/usa.webp';
+import netherland from '/netherland.webp'
+import japan from '/japan.webp'
+import china from '/china.webp'
+import newze from '/newzeland.webp'
 
 export const destinations: Destination[] = [
   {
@@ -27,6 +31,14 @@ export const destinations: Destination[] = [
       'Australia offers world class education, diverse course options, and a welcoming multicultural environment. International students benefit from post-study work visas, part-time job opportunities, high living standards, and strong graduate employability all in a safe, vibrant setting.',
     link: '#',
   },
+  {
+  id: 'bangalore',
+  name: 'STUDY IN BANGALORE',
+  image: bangalore,
+  hoverText:
+    'Bangalore, India’s tech capital, is home to prestigious institutions in technology, management, and science. With its startup ecosystem, vibrant student culture, and pleasant climate, it’s an ideal choice for students seeking academic and career growth.',
+  link: '#',
+},
   {
     id: 'canada',
     name: 'STUDY IN CANADA',
@@ -43,6 +55,14 @@ export const destinations: Destination[] = [
       'Germany is a leading destination for international students, offering world-class education, low or no tuition fees, and a strong focus on research and innovation. With globally ranked universities, post-study work opportunities, and a rich cultural experience, Germany provides the ideal environment for academic and career growth.',
     link: '#',
   },
+   {
+  id: 'chennai',
+  name: 'STUDY IN CHENNAI',
+  image: chennai,
+  hoverText:
+    'Chennai, a major educational and cultural hub in South India, offers top universities and research institutions. Known for its excellence in engineering, medicine, and arts, the city provides a blend of academic rigor, coastal charm, and affordable living.',
+  link: '#',
+},
   {
     id: 'uk',
     name: 'STUDY IN THE UK',
@@ -78,7 +98,7 @@ export const destinations: Destination[] = [
   {
     id: 'japan',
     name: 'STUDY IN JAPAN',
-    image: usa,
+    image: japan,
     hoverText:
       'Japan combines academic excellence with cutting-edge technology and rich cultural heritage. International students benefit from high-quality education, global research opportunities, affordable tuition, and a safe, innovative learning environment.',
     link: '#',
@@ -86,7 +106,7 @@ export const destinations: Destination[] = [
   {
     id: 'china',
     name: 'STUDY IN CHINA',
-    image: canada,
+    image: china,
     hoverText:
       'China is a rising global education hub offering affordable tuition, modern campuses, and strong programs in medicine, engineering, business, and technology. International students enjoy cultural immersion, growing English-taught courses, and expanding career opportunities in Asia’s fastest-growing economy.',
     link: '#',
@@ -94,7 +114,7 @@ export const destinations: Destination[] = [
   {
     id: 'netherlands',
     name: 'STUDY IN THE NETHERLANDS',
-    image: canada,
+    image: netherland,
     hoverText:
       'The Netherlands offers high-quality, English-taught programs in a globally recognized education system. With affordable tuition, multicultural campuses, and a strong focus on innovation and research, it’s an ideal choice for international students seeking a European education experience.',
     link: '#',
@@ -102,27 +122,11 @@ export const destinations: Destination[] = [
   {
     id: 'newzealand',
     name: 'STUDY IN NEW ZEALAND',
-    image: canada,
+    image: newze,
     hoverText:
       'New Zealand offers world-class education, a safe and welcoming environment, and stunning natural landscapes. With affordable tuition, post-study work opportunities, and globally recognized qualifications, it\'s an excellent choice for international students.',
     link: '#',
   },
-  {
-  id: 'chennai',
-  name: 'STUDY IN CHENNAI',
-  image: chennai,
-  hoverText:
-    'Chennai, a major educational and cultural hub in South India, offers top universities and research institutions. Known for its excellence in engineering, medicine, and arts, the city provides a blend of academic rigor, coastal charm, and affordable living.',
-  link: '#',
-},
-{
-  id: 'bangalore',
-  name: 'STUDY IN BANGALORE',
-  image: bangalore,
-  hoverText:
-    'Bangalore, India’s tech capital, is home to prestigious institutions in technology, management, and science. With its startup ecosystem, vibrant student culture, and pleasant climate, it’s an ideal choice for students seeking academic and career growth.',
-  link: '#',
-},
 {
   id: 'mumbai',
   name: 'STUDY IN MUMBAI',

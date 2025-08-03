@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { ArrowDown, Play } from 'lucide-react';
 import InteractiveGlobe from './InteractiveGlobe';
 import { useNavigate } from 'react-router-dom';
 
